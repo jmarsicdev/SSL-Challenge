@@ -1,0 +1,3 @@
+# Augmentation ablation: geometry only (crop + flip), no photometric distortion.
+_base_: ssl_byol.yaml
+views: crop

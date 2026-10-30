@@ -1,0 +1,3 @@
+# Augmentation ablation: crop + brightness/contrast jitter + solarize, no blur.
+_base_: ssl_simclr.yaml
+views: photo

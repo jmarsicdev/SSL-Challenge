@@ -1,0 +1,5 @@
+# SimCLR: NT-Xent contrastive loss, two views per image, other images in the batch are negatives.
+_base_: ssl_base.yaml
+ssl: simclr
+temperature: 0.2
+proj_dim: 128

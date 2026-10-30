@@ -1,0 +1,9 @@
+# Linear probe: frozen encoder (BN statistics fixed), one linear layer trained with light augmentation.
+# Measures how linearly separable the learned representation is, independent of fine-tuning dynamics.
+_base_: sup_base.yaml
+freeze_backbone: true
+epochs: 60
+lr: 0.003
+weight_decay: 0.0
+warmup_epochs: 2
+eval_every: 2

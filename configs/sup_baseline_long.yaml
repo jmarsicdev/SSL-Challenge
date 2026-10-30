@@ -1,0 +1,6 @@
+# Supervised baseline with a 3x longer budget (same optimizer steps as the joint runs): rules out
+# "SSL just trained longer" as the explanation for any gain.
+_base_: sup_base.yaml
+epochs: 300
+warmup_epochs: 5
+eval_every: 2

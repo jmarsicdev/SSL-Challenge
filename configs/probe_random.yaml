@@ -1,0 +1,3 @@
+# Control: linear probe on a randomly initialised, never-trained encoder.
+_base_: probe_base.yaml
+init: null

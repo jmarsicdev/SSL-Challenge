@@ -1,0 +1,3 @@
+# Fine-tuning from an SSL checkpoint: identical recipe to sup_baseline, only the initialisation differs.
+# {seed} is substituted so seed k fine-tunes the seed-k pretraining run.
+_base_: sup_base.yaml

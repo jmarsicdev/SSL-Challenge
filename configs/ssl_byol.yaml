@@ -1,0 +1,5 @@
+# BYOL: online network predicts an EMA teacher's projection of the other view; no negatives.
+_base_: ssl_base.yaml
+ssl: byol
+proj_dim: 256
+ema_base: 0.99

@@ -1,0 +1,4 @@
+# RotNet: 4-way rotation prediction. Simplest pretext; scenes have a canonical orientation (sky up).
+_base_: ssl_base.yaml
+ssl: rotnet
+batch_size: 128

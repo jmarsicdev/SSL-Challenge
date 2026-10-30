@@ -1,0 +1,2 @@
+# Supervised baseline: ResNet-18 from random init, classification objective only, 100 epochs.
+_base_: sup_base.yaml

@@ -1,0 +1,21 @@
+# Shared self-supervised pretraining defaults. Pretraining sees the 1,920 training-split images only;
+# labels are never read. kNN on frozen features (train -> val) is logged as a monitor.
+seed: 0
+model: resnet18
+img_size: 160
+batch_size: 128        # 15 steps/epoch; 800 epochs = 12k updates
+epochs: 800
+optimizer: adamw
+lr: 0.001
+weight_decay: 0.00001
+scheduler: cosine
+warmup_epochs: 10
+grad_clip: null
+views: photoblur       # crop | photo | photoblur
+ssl_rrc_scale: [0.2, 1.0]
+aug: light             # supervised view preset, used by joint training only
+rrc_scale: [0.35, 1.0]
+proj_hidden: 2048
+knn_every: 25
+snapshots: [100, 200, 400]
+num_workers: 20

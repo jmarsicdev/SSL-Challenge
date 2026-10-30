@@ -1,0 +1,28 @@
+# Shared supervised defaults (baseline, fine-tuning, probe, joint). Experiments override what they change.
+# 160 px everywhere so resolution is never a confound between arms; 224 is a best-recipe knob only.
+seed: 0
+model: resnet18
+init: null            # path to an SSL checkpoint (runs/<ssl-run>/s{seed}/ssl.pt) or null = random init
+mode: supervised      # supervised | joint
+freeze_backbone: false
+img_size: 160
+aug: light            # RandomResizedCrop(0.35-1) + flip, the A1 recipe
+rrc_scale: [0.35, 1.0]
+batch_size: 64
+epochs: 100
+optimizer: adamw
+lr: 0.001
+head_lr_mult: 1.0
+weight_decay: 0.05
+scheduler: cosine
+warmup_epochs: 3
+label_smoothing: 0.0
+mixup: 0.0
+cutmix: 0.0
+dropout: 0.0
+drop_path: 0.0
+ema_decay: null
+grad_clip: null
+amp: true
+eval_every: 1
+num_workers: 12

@@ -1,0 +1,7 @@
+# FINAL MODEL (= best_simclr_e224_lowlr, seed 0).
+# Stage 1: python pretrain.py --config configs/ssl_simclr.yaml --seed 0     (-> runs/ssl_simclr/s0/ssl.pt)
+# Stage 2: python train.py    --config configs/best.yaml       --seed 0     (-> runs/best/s0/best.pt)
+# SimCLR-pretrained ResNet-18 (160 px, 800 ep) fine-tuned at 224 px with label smoothing 0.1, EMA weights,
+# 300-epoch cosine schedule, lr 3e-4. Random-init control with the identical recipe: configs/sup_baseline_best224_lowlr.yaml
+_base_: best_simclr_e224_lowlr.yaml
+seed: 0

@@ -1,0 +1,29 @@
+{
+  "checkpoint": "runs/best_simclr_e224_lowlr/s2/best.pt",
+  "split": "test",
+  "n": 400,
+  "acc": 0.875,
+  "loss": 0.5201688241958619,
+  "tta": false,
+  "per_class": {
+    "Bedroom": 0.76,
+    "Coast": 0.92,
+    "Flower": 1.0,
+    "Forest": 0.88,
+    "Highway": 1.0,
+    "Industrial": 0.72,
+    "InsideCity": 0.96,
+    "Kitchen": 0.56,
+    "LivingRoom": 0.8,
+    "Mountain": 0.8,
+    "Office": 0.96,
+    "OpenCountry": 1.0,
+    "Store": 0.72,
+    "Street": 1.0,
+    "Suburb": 1.0,
+    "TallBuilding": 0.92
+  },
+  "model": "resnet18",
+  "train_val_acc": 0.9041666388511658,
+  "epoch": 110
+}

@@ -16,6 +16,21 @@ Validation set: 480 images (30/class) held out of the 2,400 training images; one
 | ft_rotnet | 3 | 84.86 ± 0.84 | 84.0–85.6 | 99.6 / 82.8 | resnet18 | rotnet (ssl_rotnet) | supervised | - | 120 | light | 160 | 100 | 0.001 | 0 | 0.05 | - | 11.18 | 1.1 |
 | sup_baseline_long | 3 | 81.18 ± 0.12 | 81.0–81.2 | 99.9 / 79.9 | resnet18 | random | supervised | - | 120 | light | 160 | 300 | 0.001 | 0 | 0.05 | - | 11.18 | 2.7 |
 | joint_byol | 3 | 83.13 ± 0.42 | 82.7–83.5 | 99.8 / 81.7 | resnet18 | random | joint (byol) | - | 120 | light | 160 | 300 | 0.001 | 0 | 0.05 | - | 11.18 | 10.2 |
+| best_simclr_a | 1 | 85.83 |  | 99.9 / 83.7 | resnet18 | simclr (ssl_simclr) | supervised | - | 120 | light | 160 | 300 | 0.001 | 0.1 | 0.05 | y | 11.18 | 4.8 |
+| sup_baseline_best | 1 | 83.96 |  | 99.9 / 82.5 | resnet18 | random | supervised | - | 120 | light | 160 | 300 | 0.001 | 0.1 | 0.05 | y | 11.18 | 4.9 |
+| best_simclr_b224 | 3 | 90.21 ± 0.42 | 89.8–90.6 | 100.0 / 88.0 | resnet18 | simclr (ssl_simclr) | supervised | - | 120 | light | 224 | 300 | 0.001 | 0.1 | 0.05 | y | 11.18 | 8.6 |
+| probe_byol_crop | 1 | 78.12 |  | 90.3 / 77.3 | resnet18 | byol (ssl_byol_crop) | supervised | y | 120 | light | 160 | 60 | 0.003 | 0 | 0 | - | 11.18 | 0.4 |
+| ft_byol_crop | 1 | 85.42 |  | 99.8 / 84.2 | resnet18 | byol (ssl_byol_crop) | supervised | - | 120 | light | 160 | 100 | 0.001 | 0 | 0.05 | - | 11.18 | 1.6 |
+| best_simclr_c_lowlr | 1 | 87.29 |  | 99.9 / 85.4 | resnet18 | simclr (ssl_simclr) | supervised | - | 120 | light | 160 | 300 | 0.0003 | 0.1 | 0.05 | y | 11.18 | 4.2 |
+| best_byol_a | 1 | 86.04 |  | 99.9 / 83.5 | resnet18 | byol (ssl_byol) | supervised | - | 120 | light | 160 | 300 | 0.001 | 0.1 | 0.05 | y | 11.18 | 4.7 |
+| best_simclr_e224_lowlr | 3 | 90.62 ± 0.21 | 90.4–90.8 | 100.0 / 88.3 | resnet18 | simclr (ssl_simclr) | supervised | - | 120 | light | 224 | 300 | 0.0003 | 0.1 | 0.05 | y | 11.18 | 8.9 |
+| probe_byol_photo | 1 | 84.79 |  | 91.1 / 84.6 | resnet18 | byol (ssl_byol_photo) | supervised | y | 120 | light | 160 | 60 | 0.003 | 0 | 0 | - | 11.18 | 0.6 |
+| ft_byol_photo | 1 | 85.21 |  | 99.6 / 83.7 | resnet18 | byol (ssl_byol_photo) | supervised | - | 120 | light | 160 | 100 | 0.001 | 0 | 0.05 | - | 11.18 | 1.8 |
+| sup_baseline_best224_lowlr | 3 | 86.18 ± 0.12 | 86.0–86.3 | 99.9 / 84.7 | resnet18 | random | supervised | - | 120 | light | 224 | 300 | 0.0003 | 0.1 | 0.05 | y | 11.18 | 8.3 |
+| sup_scenenet | 3 | 82.50 ± 1.10 | 81.2–83.3 | 97.8 / 81.7 | scenenet_s | random | supervised | - | 120 | light | 160 | 100 | 0.001 | 0 | 0.05 | - | 0.86 | 1.6 |
+| sup_baseline_best224 | 1 | 86.46 |  | 100.0 / 85.6 | resnet18 | random | supervised | - | 120 | light | 224 | 300 | 0.001 | 0.1 | 0.05 | y | 11.18 | 7.4 |
+| probe_byol_scenenet | 2 | 79.48 ± 0.15 | 79.4–79.6 | 84.9 / 78.9 | scenenet_s | byol (ssl_byol_scenenet) | supervised | y | 120 | light | 160 | 60 | 0.003 | 0 | 0 | - | 0.86 | 0.6 |
+| ft_byol_scenenet | 2 | 86.04 ± 0.00 | 86.0–86.0 | 99.5 / 85.1 | scenenet_s | byol (ssl_byol_scenenet) | supervised | - | 120 | light | 160 | 100 | 0.001 | 0 | 0.05 | - | 0.86 | 1.6 |
 
 ## Self-supervised pretraining (weighted kNN, k=20, frozen features, train split -> val)
 
@@ -24,3 +39,6 @@ Validation set: 480 images (30/class) held out of the 2,400 training images; one
 | ssl_byol | 3 | 78.82 ± 1.94 | 80.00 ± 1.16 | byol | resnet18 | photoblur | 160 | 800 | 128 | 0.001 | 0.126 | 19.2 |
 | ssl_simclr | 3 | 79.86 ± 1.56 | 81.04 ± 1.25 | simclr | resnet18 | photoblur | 160 | 800 | 128 | 0.001 | 1.324 | 16.3 |
 | ssl_rotnet | 3 | 57.08 ± 0.42 | 59.93 ± 0.60 | rotnet | resnet18 | photoblur | 160 | 800 | 128 | 0.001 | 0.018 | 6.0 |
+| ssl_byol_crop | 1 | 71.88 | 73.12 | byol | resnet18 | crop | 160 | 800 | 128 | 0.001 | 0.055 | 19.9 |
+| ssl_byol_photo | 1 | 81.88 | 82.71 | byol | resnet18 | photo | 160 | 800 | 128 | 0.001 | 0.097 | 21.2 |
+| ssl_byol_scenenet | 2 | 75.10 ± 0.44 | 75.94 ± 0.15 | byol | scenenet_s | photoblur | 160 | 800 | 128 | 0.001 | 0.110 | 25.1 |

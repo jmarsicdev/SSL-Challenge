@@ -1,0 +1,10 @@
+# Final-recipe candidate e at 3 seeds, b224 replication, and the random-init controls at 224 px
+train.py  best_simclr_e224_lowlr        0
+train.py  sup_baseline_best224_lowlr    0
+train.py  sup_baseline_best224          0
+train.py  best_simclr_e224_lowlr        1
+train.py  best_simclr_e224_lowlr        2
+train.py  best_simclr_b224              1
+train.py  best_simclr_b224              2
+train.py  sup_baseline_best224_lowlr    1
+train.py  sup_baseline_best224_lowlr    2

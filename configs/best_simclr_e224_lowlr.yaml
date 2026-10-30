@@ -1,0 +1,4 @@
+# e: 224 px + lower fine-tuning LR (the two knobs that helped at seed 0, combined)
+_base_: best_simclr_a.yaml
+img_size: 224
+lr: 0.0003

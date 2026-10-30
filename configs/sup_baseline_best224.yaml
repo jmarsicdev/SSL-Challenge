@@ -1,0 +1,3 @@
+# Control for the final recipe: random init, 224 px, LS + EMA + 300 ep, lr 1e-3
+_base_: sup_baseline_best.yaml
+img_size: 224

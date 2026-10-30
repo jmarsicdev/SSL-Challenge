@@ -1,0 +1,6 @@
+# Best-recipe candidates at seed 0 (one knob each vs best_simclr_a); winner is replicated at seeds 1-2
+train.py  best_simclr_a        0
+train.py  sup_baseline_best    0
+train.py  best_simclr_b224     0
+train.py  best_simclr_c_lowlr  0
+train.py  best_byol_a          0

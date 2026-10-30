@@ -1,0 +1,3 @@
+# Control for the final recipe with the identical LR (3e-4): only the initialisation differs from best_simclr_e224_lowlr
+_base_: sup_baseline_best224.yaml
+lr: 0.0003

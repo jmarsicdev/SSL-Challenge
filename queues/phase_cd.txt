@@ -1,0 +1,23 @@
+# Phase C (Q2): augmentation ablation on BYOL, seed 0
+pretrain.py  ssl_byol_crop        0
+train.py     probe_byol_crop      0
+train.py     ft_byol_crop         0
+pretrain.py  ssl_byol_photo       0
+train.py     probe_byol_photo     0
+train.py     ft_byol_photo        0
+# Phase D (Q3): SceneNet-S edge backbone, supervised vs BYOL-pretrained, 3 seeds
+train.py     sup_scenenet         0
+train.py     sup_scenenet         1
+train.py     sup_scenenet         2
+pretrain.py  ssl_byol_scenenet    0
+train.py     probe_byol_scenenet  0
+train.py     ft_byol_scenenet     0
+pretrain.py  ssl_byol_scenenet    1
+train.py     probe_byol_scenenet  1
+train.py     ft_byol_scenenet     1
+pretrain.py  ssl_byol_scenenet    2
+train.py     probe_byol_scenenet  2
+train.py     ft_byol_scenenet     2
+train.py     sup_scenenet_long    0
+train.py     sup_scenenet_long    1
+train.py     sup_scenenet_long    2

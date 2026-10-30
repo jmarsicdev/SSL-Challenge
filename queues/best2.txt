@@ -8,3 +8,10 @@ train.py  best_simclr_b224              1
 train.py  best_simclr_b224              2
 train.py  sup_baseline_best224_lowlr    1
 train.py  sup_baseline_best224_lowlr    2
+# Q2 second method: SimCLR augmentation ablation, seed 0
+pretrain.py  ssl_simclr_crop      0
+train.py     probe_simclr_crop    0
+train.py     ft_simclr_crop       0
+pretrain.py  ssl_simclr_photo     0
+train.py     probe_simclr_photo   0
+train.py     ft_simclr_photo      0

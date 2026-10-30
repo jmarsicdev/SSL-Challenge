@@ -1,0 +1,2 @@
+_base_: probe_base.yaml
+init: runs/ssl_simclr_photo/s{seed}/ssl.pt

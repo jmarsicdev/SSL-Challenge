@@ -60,3 +60,13 @@ train.py     ft_byol_scenenet     2
 train.py     sup_scenenet_long    0
 train.py     sup_scenenet_long    1
 train.py     sup_scenenet_long    2
+# Phase E (Q3 cont.): MobileNetV3-Small, supervised vs BYOL-pretrained, 3 seeds
+train.py     sup_mobilenet         0
+train.py     sup_mobilenet         1
+train.py     sup_mobilenet         2
+pretrain.py  ssl_byol_mobilenet    0
+train.py     ft_byol_mobilenet     0
+pretrain.py  ssl_byol_mobilenet    1
+train.py     ft_byol_mobilenet     1
+pretrain.py  ssl_byol_mobilenet    2
+train.py     ft_byol_mobilenet     2

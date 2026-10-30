@@ -8,17 +8,19 @@ Validation set: 480 images (30/class) held out of the 2,400 training images; one
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | sup_baseline | 3 | 80.42 ± 0.91 | 79.8–81.5 | 98.4 / 78.7 | resnet18 | random | supervised | - | 120 | light | 160 | 100 | 0.001 | 0 | 0.05 | - | 11.18 | 1.0 |
 | probe_random | 1 | 28.54 |  | 25.0 / 28.3 | resnet18 | random | supervised | y | 120 | light | 160 | 60 | 0.003 | 0 | 0 | - | 11.18 | 0.4 |
-| probe_byol | 1 | 84.17 |  | 89.9 / 82.9 | resnet18 | byol (ssl_byol) | supervised | y | 120 | light | 160 | 60 | 0.003 | 0 | 0 | - | 11.18 | 0.4 |
-| ft_byol | 1 | 85.21 |  | 99.7 / 84.4 | resnet18 | byol (ssl_byol) | supervised | - | 120 | light | 160 | 100 | 0.001 | 0 | 0.05 | - | 11.18 | 1.1 |
-| probe_simclr | 1 | 82.92 |  | 93.9 / 82.5 | resnet18 | simclr (ssl_simclr) | supervised | y | 120 | light | 160 | 60 | 0.003 | 0 | 0 | - | 11.18 | 0.4 |
-| ft_simclr | 1 | 85.83 |  | 99.8 / 84.4 | resnet18 | simclr (ssl_simclr) | supervised | - | 120 | light | 160 | 100 | 0.001 | 0 | 0.05 | - | 11.18 | 1.1 |
-| probe_rotnet | 1 | 69.17 |  | 74.4 / 67.9 | resnet18 | rotnet (ssl_rotnet) | supervised | y | 120 | light | 160 | 60 | 0.003 | 0 | 0 | - | 11.18 | 0.4 |
-| ft_rotnet | 1 | 85.62 |  | 99.6 / 83.1 | resnet18 | rotnet (ssl_rotnet) | supervised | - | 120 | light | 160 | 100 | 0.001 | 0 | 0.05 | - | 11.18 | 1.1 |
+| probe_byol | 3 | 83.19 ± 0.87 | 82.5–84.2 | 90.0 / 82.1 | resnet18 | byol (ssl_byol) | supervised | y | 120 | light | 160 | 60 | 0.003 | 0 | 0 | - | 11.18 | 0.4 |
+| ft_byol | 3 | 84.79 ± 0.91 | 83.7–85.4 | 99.8 / 84.0 | resnet18 | byol (ssl_byol) | supervised | - | 120 | light | 160 | 100 | 0.001 | 0 | 0.05 | - | 11.18 | 1.1 |
+| probe_simclr | 3 | 82.29 ± 0.62 | 81.7–82.9 | 93.4 / 82.2 | resnet18 | simclr (ssl_simclr) | supervised | y | 120 | light | 160 | 60 | 0.003 | 0 | 0 | - | 11.18 | 0.4 |
+| ft_simclr | 3 | 85.97 ± 0.43 | 85.6–86.5 | 99.8 / 84.4 | resnet18 | simclr (ssl_simclr) | supervised | - | 120 | light | 160 | 100 | 0.001 | 0 | 0.05 | - | 11.18 | 1.1 |
+| probe_rotnet | 3 | 69.51 ± 0.32 | 69.2–69.8 | 73.8 / 68.0 | resnet18 | rotnet (ssl_rotnet) | supervised | y | 120 | light | 160 | 60 | 0.003 | 0 | 0 | - | 11.18 | 0.4 |
+| ft_rotnet | 3 | 84.86 ± 0.84 | 84.0–85.6 | 99.6 / 82.8 | resnet18 | rotnet (ssl_rotnet) | supervised | - | 120 | light | 160 | 100 | 0.001 | 0 | 0.05 | - | 11.18 | 1.1 |
+| sup_baseline_long | 3 | 81.18 ± 0.12 | 81.0–81.2 | 99.9 / 79.9 | resnet18 | random | supervised | - | 120 | light | 160 | 300 | 0.001 | 0 | 0.05 | - | 11.18 | 2.7 |
+| joint_byol | 3 | 83.13 ± 0.42 | 82.7–83.5 | 99.8 / 81.7 | resnet18 | random | joint (byol) | - | 120 | light | 160 | 300 | 0.001 | 0 | 0.05 | - | 11.18 | 10.2 |
 
 ## Self-supervised pretraining (weighted kNN, k=20, frozen features, train split -> val)
 
 | pretraining run | seeds | kNN val acc % at end (mean ± std) | best kNN % | objective | model | views | res | epochs | batch | lr | final loss | min/run |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ssl_byol | 1 | 81.04 | 81.25 | byol | resnet18 | photoblur | 160 | 800 | 128 | 0.001 | 0.125 | 19.0 |
-| ssl_simclr | 1 | 81.46 | 82.29 | simclr | resnet18 | photoblur | 160 | 800 | 128 | 0.001 | 1.331 | 16.7 |
-| ssl_rotnet | 1 | 56.67 | 60.62 | rotnet | resnet18 | photoblur | 160 | 800 | 128 | 0.001 | 0.022 | 6.1 |
+| ssl_byol | 3 | 78.82 ± 1.94 | 80.00 ± 1.16 | byol | resnet18 | photoblur | 160 | 800 | 128 | 0.001 | 0.126 | 19.2 |
+| ssl_simclr | 3 | 79.86 ± 1.56 | 81.04 ± 1.25 | simclr | resnet18 | photoblur | 160 | 800 | 128 | 0.001 | 1.324 | 16.3 |
+| ssl_rotnet | 3 | 57.08 ± 0.42 | 59.93 ± 0.60 | rotnet | resnet18 | photoblur | 160 | 800 | 128 | 0.001 | 0.018 | 6.0 |

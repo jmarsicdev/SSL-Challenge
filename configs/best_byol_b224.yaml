@@ -1,0 +1,3 @@
+# b: as a, fine-tuned at 224 px (encoder pretrained at 160 px; convnets transfer across resolution)
+_base_: best_byol_a.yaml
+img_size: 224

@@ -1,0 +1,3 @@
+# c: as a, lower fine-tuning LR (3e-4) to preserve more of the pretrained features
+_base_: best_byol_a.yaml
+lr: 0.0003

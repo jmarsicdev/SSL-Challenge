@@ -1,0 +1,8 @@
+# Best-recipe candidates: SSL init + the A1 knobs that survived seeds there (label smoothing, EMA weights,
+# longer cosine schedule). Candidates differ in one knob each; the winner is replicated over 3 seeds.
+_base_: ft_base.yaml
+label_smoothing: 0.1
+ema_decay: 0.995
+epochs: 300
+warmup_epochs: 5
+eval_every: 2

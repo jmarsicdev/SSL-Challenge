@@ -1,0 +1,11 @@
+# d: as a, but the fine-tuning stage keeps the BYOL loss on (pretrain -> joint CE + BYOL)
+_base_: best_byol_a.yaml
+mode: joint
+ssl: byol
+proj_dim: 256
+proj_hidden: 2048
+ema_base: 0.99
+views: photoblur
+ssl_rrc_scale: [0.2, 1.0]
+ssl_weight: 1.0
+num_workers: 20

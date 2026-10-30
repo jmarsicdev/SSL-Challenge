@@ -1,0 +1,2 @@
+_base_: best_simclr_a.yaml
+lr: 0.0003

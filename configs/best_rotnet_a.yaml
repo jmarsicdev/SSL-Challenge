@@ -1,0 +1,3 @@
+# a: RotNet init + LS 0.1 + EMA + 300 ep, 160 px
+_base_: best_base.yaml
+init: runs/ssl_rotnet/s{seed}/ssl.pt

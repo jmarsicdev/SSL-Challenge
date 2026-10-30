@@ -1,0 +1,4 @@
+# Control for the best recipe: the same LS + EMA + 300-ep knobs from random init.
+# Separates "the recipe knobs helped" from "the SSL init helped".
+_base_: best_base.yaml
+init: null

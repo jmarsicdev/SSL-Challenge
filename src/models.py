@@ -61,7 +61,10 @@ def build_backbone(name: str, drop_path: float = 0.0) -> nn.Module:
         kwargs["drop_path_rate"] = drop_path
     assert kwargs["pretrained"] is False, "assignment rule: no externally pretrained weights"
     bb = timm.create_model(name, **kwargs)
-    assert hasattr(bb, "num_features")
+    # some timm families (MobileNetV3) report the pre-head width in num_features but output the head width
+    with torch.no_grad():
+        bb.num_features = bb.eval()(torch.zeros(1, 3, 64, 64)).shape[1]
+    bb.train()
     return bb
 
 

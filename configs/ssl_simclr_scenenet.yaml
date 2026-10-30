@@ -1,0 +1,3 @@
+# Same SimCLR pretraining as ssl_simclr, edge backbone.
+_base_: ssl_simclr.yaml
+model: scenenet_s

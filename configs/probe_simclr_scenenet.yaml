@@ -1,0 +1,3 @@
+_base_: probe_base.yaml
+model: scenenet_s
+init: runs/ssl_simclr_scenenet/s{seed}/ssl.pt

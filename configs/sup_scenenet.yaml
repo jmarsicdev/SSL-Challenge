@@ -1,0 +1,3 @@
+# Edge backbone: SceneNet-S (0.86M params) supervised from scratch, same recipe as sup_baseline.
+_base_: sup_base.yaml
+model: scenenet_s

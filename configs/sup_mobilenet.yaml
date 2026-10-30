@@ -1,0 +1,3 @@
+# Edge backbone: MobileNetV3-Small (timm mobilenetv3_small_100, ~1.5M params without the 1000-way head).
+_base_: sup_base.yaml
+model: mobilenetv3_small_100

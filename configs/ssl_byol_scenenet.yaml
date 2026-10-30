@@ -1,0 +1,3 @@
+# Same BYOL pretraining as ssl_byol, edge backbone.
+_base_: ssl_byol.yaml
+model: scenenet_s

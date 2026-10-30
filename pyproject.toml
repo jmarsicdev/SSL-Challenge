@@ -1,0 +1,33 @@
+[project]
+name = "ssl-challenge"
+version = "0.1.0"
+description = "ITCS 6169/8169 Assignment 2: self-supervised representation learning on 2,400 scene images"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch>=2.7",
+    "torchvision>=0.22",
+    "timm>=1.0",
+    "numpy",
+    "pyyaml",
+    "matplotlib",
+    "scikit-learn",
+    "pandas",
+    "tqdm",
+    "tensorboard",
+    "pillow",
+]
+
+[project.optional-dependencies]
+dev = ["jupyterlab", "ipykernel", "gdown"]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128" }]
+torchvision = [{ index = "pytorch-cu128" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true

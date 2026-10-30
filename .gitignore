@@ -1,0 +1,44 @@
+# data & large artifacts (never commit the dataset or checkpoints; link them instead)
+data/
+checkpoints/*
+!checkpoints/.gitkeep
+runs/*
+!runs/.gitkeep
+*.pt
+*.pth
+*.ckpt
+*.zip
+*.tar.gz
+
+# python / env
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# tooling
+.DS_Store
+__MACOSX/
+*.log
+events.out.tfevents.*
+wandb/
+
+# report build junk
+report/*.aux
+report/*.bbl
+report/*.blg
+report/*.out
+report/*.synctex.gz
+report/*.fls
+report/*.fdb_latexmk
+
+# local working notes, not part of the submission
+PLAN.md
+docs/report_draft.md
+docs/study_guide.md
+docs/report.html
+docs/report_draft.pdf

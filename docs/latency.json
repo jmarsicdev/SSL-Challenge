@@ -1,0 +1,50 @@
+[
+  {
+    "model": "scenenet_s",
+    "img_size": 160,
+    "params_M": 0.861936,
+    "MMACs": 92.292992,
+    "cpu_batch1_ms": 1.8785382667071342,
+    "gpu_img_per_s_bf16_b64": 54195.4721974248
+  },
+  {
+    "model": "scenenet_s",
+    "img_size": 224,
+    "params_M": 0.861936,
+    "MMACs": 180.8864,
+    "cpu_batch1_ms": 2.3756415001116693,
+    "gpu_img_per_s_bf16_b64": 28915.95755878927
+  },
+  {
+    "model": "mobilenetv3_small_100",
+    "img_size": 160,
+    "params_M": 1.534256,
+    "MMACs": 28.83936,
+    "cpu_batch1_ms": 1.5839405998121947,
+    "gpu_img_per_s_bf16_b64": 52707.693882493855
+  },
+  {
+    "model": "mobilenetv3_small_100",
+    "img_size": 224,
+    "params_M": 1.534256,
+    "MMACs": 55.502784,
+    "cpu_batch1_ms": 1.5576876665969999,
+    "gpu_img_per_s_bf16_b64": 46621.09803901608
+  },
+  {
+    "model": "resnet18",
+    "img_size": 160,
+    "params_M": 11.18472,
+    "MMACs": 925.294592,
+    "cpu_batch1_ms": 9.41158893328975,
+    "gpu_img_per_s_bf16_b64": 21784.7228110795
+  },
+  {
+    "model": "resnet18",
+    "img_size": 224,
+    "params_M": 11.18472,
+    "MMACs": 1813.569536,
+    "cpu_batch1_ms": 5.620095700093467,
+    "gpu_img_per_s_bf16_b64": 12078.443131657164
+  }
+]
